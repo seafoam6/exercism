@@ -1,0 +1,113 @@
+Arguments: 
+  /Users/fulci/.nvm/versions/node/v9.2.0/bin/node /Users/fulci/.yarn/bin/yarn.js test
+
+PATH: 
+  /Users/fulci/.yarn/bin:/Users/fulci/.config/yarn/global/node_modules/.bin:/usr/local/sbin:/Users/fulci/.nvm/versions/node/v9.2.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/fulci/.yarn/bin:/Users/fulci/.config/yarn/global/node_modules/.bin:/usr/local/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.2.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "xecmascript",
+    "version": "0.0.0",
+    "description": "Exercism exercises in ECMAScript 6.",
+    "author": "Katrina Owen",
+    "private": true,
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/exercism/xecmascript"
+    },
+    "devDependencies": {
+      "babel-jest": "^21.2.0",
+      "babel-plugin-transform-builtin-extend": "^1.1.2",
+      "babel-preset-env": "^1.4.0",
+      "eslint": "^3.19.0",
+      "eslint-config-airbnb": "^15.0.1",
+      "eslint-plugin-import": "^2.2.0",
+      "eslint-plugin-jsx-a11y": "^5.0.1",
+      "eslint-plugin-react": "^7.0.1",
+      "jest": "^21.2.1"
+    },
+    "jest": {
+      "modulePathIgnorePatterns": [
+        "package.json"
+      ]
+    },
+    "babel": {
+      "presets": [
+        [
+          "env",
+          {
+            "node": "current"
+          }
+        ]
+      ],
+      "plugins": [
+        [
+          "babel-plugin-transform-builtin-extend",
+          {
+            "globals": [
+              "Error"
+            ]
+          }
+        ],
+        [
+          "transform-regenerator"
+        ]
+      ]
+    },
+    "scripts": {
+      "test": "jest --no-cache ./*",
+      "watch": "jest --no-cache --watch ./*",
+      "lint": "eslint .",
+      "lint-test": "eslint . && jest --no-cache ./* "
+    },
+    "eslintConfig": {
+      "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+      },
+      "env": {
+        "es6": true,
+        "node": true,
+        "jest": true
+      },
+      "extends": "airbnb",
+      "rules": {
+        "import/no-unresolved": "off",
+        "import/extensions": "off"
+      }
+    },
+    "licenses": [
+      "MIT"
+    ],
+    "dependencies": {}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c jest --no-cache ./*
+  Directory: /Users/fulci/exercism/ecmascript/matrix
+  Output:
+  
+      at ProcessTermError.MessageError (/Users/fulci/.yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/fulci/.yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/fulci/.yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:159:13)
+      at maybeClose (internal/child_process.js:943:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
